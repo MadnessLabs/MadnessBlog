@@ -1,0 +1,16 @@
+{
+  "name": "MadnessApp",
+  "private": "true",
+  "devDependencies": {},
+  "dependencies": {
+    "bootstrap": "~3.2.0",
+    "fontawesome": "*",
+    "semantic-grid": "*",
+    "angular": "*",
+    "angular-route": "*",
+    "angular-animate": "~1.3.0",
+    "animate.less": "*",
+    "angular-ui-bootstrap-bower": "~0.11.2",
+    "roots": "~7.0.2"
+  }
+}

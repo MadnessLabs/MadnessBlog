@@ -1,0 +1,12 @@
+CACHE MANIFEST
+# Version 0.1
+
+CACHE:
+fonts/fontawesome-webfont.ttf
+fonts/glyphicons-halflings-regular.ttf
+img/madnesslabs-logo.png
+html/home.html
+index.html
+
+NETWORK:
+*
