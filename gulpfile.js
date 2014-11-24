@@ -101,9 +101,9 @@ gulp.task('less', function() {
 
 gulp.task('js-watch', function() {
     gulp.src(paths.js)
-        .pipe(concat('build.js'))
+        .pipe(concat('scripts.js'))
         .pipe(gulp.dest('./public/blog/wp-content/themes/MadnessApp/assets/js'))
-        .pipe(rename('scripts.js'))
+        .pipe(rename('scripts.min.js'))
         .pipe(uglify({
             "mangle": false
         }))
@@ -132,9 +132,9 @@ gulp.task('js', function() {
         .pipe(gulp.dest('./public/js'));
 
     gulp.src(paths.js)
-        .pipe(concat('build.js'))
+        .pipe(concat('scripts.js'))
         .pipe(gulp.dest('./public/blog/wp-content/themes/MadnessApp/assets/js'))
-        .pipe(rename('scripts.js'))
+        .pipe(rename('scripts.min.js'))
         .pipe(uglify({
             "mangle": false
         }))
