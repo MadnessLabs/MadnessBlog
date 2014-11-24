@@ -1,4 +1,4 @@
-# MadnessApp    
+# MadnessBlog    
 
 This is a basic boilerplate used by the pros at Madness Labs to make first class web apps.
 
@@ -16,8 +16,7 @@ ___
 
 The application will load up in the browser without having to install.  Installation is only required if you wish to modify the source code.  This assumes you have installed [Node.js](http://nodejs.org).
 
-1.  Run 'npm install'  
-2.  Run 'gulp install'
+Run ```npm install```  
 
 ___
 <a name="getting-started"/>
