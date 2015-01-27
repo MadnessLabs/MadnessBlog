@@ -1,42 +1,49 @@
-<!DOCTYPE HTML>
-<html ng-app="app">
-<!-- ADD TO HTML TAG TO MAKE OFFLINE APP manifest="the.appcache" -->
-<head>
+<?php
+/**
+ * Laravel - A PHP Framework For Web Artisans
+ *
+ * @package  Laravel
+ * @author   Taylor Otwell <taylorotwell@gmail.com>
+ */
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<!-- Standard Icon 
-	<link rel="icon" sizes="228x228" href="./img/icons/icon.png">
-	-->
-	<!-- Apple Icons 
-	<link rel="apple-touch-icon" href="./img/icons/icon.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="./img/icons/ios-small.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="./img/icons/ios-medium.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="./img/icons/ios-large.png">
-	-->
-	<!-- Microsoft Icons 
-	<meta name="msapplication-square70x70logo" content="./img/icon/windows-small.png">
-	<meta name="msapplication-square150x150logo" content="./img/icon/windows-medium.png">
-	<meta name="msapplication-wide310x150logo" content="./img/icon/windows-wide.png">
-	<meta name="msapplication-square310x310logo" content="./img/icon/windows-large.png">
-	-->
-	<title>Madness App</title>
-	<link rel="stylesheet" href="./css/app.css" />
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader
+| for our application. We just need to utilize it! We'll require it
+| into the script here so that we do not have to worry about the
+| loading of any our classes "manually". Feels great to relax.
+|
+*/
 
-</head>
-<body ng-controller="appCtrl">
-	<?php include('html/header.html'); ?>
+require __DIR__.'/../bootstrap/autoload.php';
 
-	<div class="content-area container-fluid" ng-view id="page-{{hash}}">
-	    <div class="loader show">
-	        <i class="fa fa-circle-o-notch fa-fw fa-spin"></i>
-	    </div>
-	</div>
+/*
+|--------------------------------------------------------------------------
+| Turn On The Lights
+|--------------------------------------------------------------------------
+|
+| We need to illuminate PHP development, so let's turn on the lights.
+| This bootstraps the framework and gets it ready for use, then it
+| will load up this application so that we can run it and send
+| the responses back to the browser and delight these users.
+|
+*/
 
-	<?php include('html/footer.html'); ?>
+$app = require_once __DIR__.'/../bootstrap/start.php';
 
-	<script src="js/build.js" async></script>
-</body>
-</html>
+/*
+|--------------------------------------------------------------------------
+| Run The Application
+|--------------------------------------------------------------------------
+|
+| Once we have the application, we can simply call the run method,
+| which will execute the request and send the response back to
+| the client's browser allowing them to enjoy the creative
+| and wonderful application we have whipped up for them.
+|
+*/
+
+$app->run();

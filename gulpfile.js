@@ -21,6 +21,10 @@ var paths = {
         './public/html/header.html',
         './public/html/footer.html'
     ],
+	 php: [
+        './app/**/*.php',
+        '!./app/storage/**/*'
+    ],
     less: [
         './src/less/**/*.less'
     ],
@@ -155,6 +159,9 @@ gulp.task('watch', function() {
     var server = livereload();
 
     gulp.watch(paths.html).on('change', function(file){
+        livereload(server).changed(file.path);
+    });
+	gulp.watch(paths.php).on('change', function(file){
         livereload(server).changed(file.path);
     });
     gulp.watch(paths.blog_html, ['blog-watch']);
